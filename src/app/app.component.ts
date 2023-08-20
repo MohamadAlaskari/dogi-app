@@ -24,7 +24,14 @@ export class AppComponent {
       'na heute war ein schönen Tag',
       'morgen habe ich eine überraschung für euch, wartet euch!',
       'ich fahre heute nach Berlin',
-      'na heute war ein schönen Tag',
+      'yummmmmmm,leckeres Essen!',
+      'ich fahre heute nach Hamburg',
+      'ich habe viel gegessen, ich kann nicht mehr bewegen.',
+      'ich fahre heute nach Osnabrück',
+      'ich fahre heute nach Oldenbürg',
+      'ich fahre heute nach München',
+
+
     ],
   };
 }
