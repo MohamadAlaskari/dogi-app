@@ -1,6 +1,9 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  
+.container {
+  padding-top: 3vw;
+  display: grid;
+  justify-content: center;
+ 
+  gap: 10px;
+  grid-template-columns: max-content;
+  grid-template-rows: repeat(10, max-content);
 }
