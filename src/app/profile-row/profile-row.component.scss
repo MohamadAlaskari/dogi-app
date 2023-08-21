@@ -1,0 +1,26 @@
+.profile-row {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+
+  }
+  div {
+    b {
+      font-size: 22px;
+      color: #2fdf84;
+    }
+    .discription {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  p{
+    margin-left: 25px;
+  }
+}

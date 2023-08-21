@@ -1,0 +1,13 @@
+<app-profile-row img="assets/img/hamster/hamster_1.jpg" name="San" discription="5 Jahre alt"></app-profile-row>
+
+<div class="freundschaft-vorschlaege">
+
+
+  <h3 class="ueberschrift-3">Freundschaft Vorschläge</h3>
+  <div class="profile-row">
+    <ng-container *ngFor="let img of profile_rows.img; let i = index">
+      <app-profile-row [img]="img" [name]="profile_rows.name[i]"
+        [discription]="profile_rows.discription[i]"></app-profile-row>
+    </ng-container>
+  </div>
+</div>

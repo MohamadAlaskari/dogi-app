@@ -1,14 +1,12 @@
 <app-header></app-header>
 
 <div class="container">
-  <ng-container *ngFor="let img of post.img; let i = index;">
-    <app-hamster-card [img]="img" [text]="post.text[i]"></app-hamster-card>
-  </ng-container>
-
-
-
-
-
-
-
+  <div class="cards-column">
+    <ng-container *ngFor="let img of post.img; let i = index;">
+      <app-hamster-card [img]="img" [text]="post.text[i]"></app-hamster-card>
+    </ng-container>
+  </div>
+  <div class="proposals-column">
+    <app-proposals></app-proposals>
+  </div>
 </div>
