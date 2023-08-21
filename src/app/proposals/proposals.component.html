@@ -5,9 +5,9 @@
 
   <h3 class="ueberschrift-3">Freundschaft Vorschläge</h3>
   <div class="profile-row">
-    <ng-container *ngFor="let img of profile_rows.img; let i = index">
-      <app-profile-row [img]="img" [name]="profile_rows.name[i]"
-        [discription]="profile_rows.discription[i]" [profile_function]="'folgen'"></app-profile-row>
+    <ng-container *ngFor="let img of profile_rows.imges; let i = index">
+      <app-profile-row [img]="img " [name]="profile_rows.names[i]"
+        [discription]="profile_rows.discriptions[i]" [profile_function]="'folgen'"></app-profile-row>
     </ng-container>
   </div>
 </div>

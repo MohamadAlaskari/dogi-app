@@ -1,0 +1,53 @@
+.friendbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding: 8px;
+  width: 400px;
+  border: 2px solid #2fdf84;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+  overflow-x: scroll;
+  .friend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    &:hover {
+      color: #2fdf84;
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid rgb(47, 223, 132);
+      background-size: cover;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 4px rgba(47, 223, 132, 0.5);
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff; /* Hintergrundfarbe der Track-Leiste */
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 2px;
+    height: 10px;
+    background: #2fdf84; /* Farbe des Scrollbalken-Thumb (der bewegliche Teil) */
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}

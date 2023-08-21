@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { DogCardComponent } from './dog-card/dog-card.component';
 import { ProposalsComponent } from './proposals/proposals.component';
 import { ProfileRowComponent } from './profile-row/profile-row.component';
+import { FriendboxComponent } from './friendbox/friendbox.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProfileRowComponent } from './profile-row/profile-row.component';
     DogCardComponent,
     ProposalsComponent,
     ProfileRowComponent,
+    FriendboxComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
