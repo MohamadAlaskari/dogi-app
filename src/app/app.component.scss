@@ -3,7 +3,7 @@
   display: grid;
   gap: 60px;
   grid-template-columns: repeat(2, 1fr); /* Zwei Spalten mit gleicher Breite */
-  grid-template-rows: repeat(10, max-content);
+  grid-template-rows:  max-content;
 
   .cards-column {
     display: flex;

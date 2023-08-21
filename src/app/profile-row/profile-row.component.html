@@ -4,5 +4,6 @@
     <h4>{{name}}</h4>
     <p class="discription">{{discription}}</p>
   </div>
-  <p class="profile-function"><b>{{profile_function}}</b></p>
+  <a class="profile-row-link" [ngClass]="{'link-green': folgen, 'link-red': !folgen}"
+    (click)="folgen && friendservice.addFriend(img, name, discription); folgen_toggle()"><b>{{profile_function}}</b></a>
 </div>

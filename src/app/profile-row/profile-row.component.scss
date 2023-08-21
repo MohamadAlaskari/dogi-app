@@ -26,11 +26,20 @@
       color: rgba(255, 255, 255, 0.7);
     }
   }
-  .profile-function {
+  .link-green{
+   &:hover{
+    color: #2fdf84;
+
+   }
+  }
+  .link-red{
+    color: #df2f2f;
+  }
+
+  .profile-row-link {
     margin-left: 3px;
     &:hover {
       cursor: pointer;
-      color: #2fdf84;
     }
   }
 }

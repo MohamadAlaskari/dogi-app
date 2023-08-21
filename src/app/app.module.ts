@@ -8,6 +8,7 @@ import { DogCardComponent } from './dog-card/dog-card.component';
 import { ProposalsComponent } from './proposals/proposals.component';
 import { ProfileRowComponent } from './profile-row/profile-row.component';
 import { FriendboxComponent } from './friendbox/friendbox.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FriendboxComponent } from './friendbox/friendbox.component';
     ProfileRowComponent,
     FriendboxComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent],
 })

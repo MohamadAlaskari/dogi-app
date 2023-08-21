@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, Input } from '@angular/core';
+import { FriendService } from '../friend.service';
 
 @Component({
   selector: 'app-profile-row',
@@ -6,9 +7,24 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./profile-row.component.scss'],
 })
 export class ProfileRowComponent {
-  @Input() img: String = '';
-  @Input() name: String = '';
-  @Input() discription: String = '';
-  @Input() profile_function: String = '';
+  folgen_status: string = 'folgen';
+  folgen: boolean = true;
 
+  @Input() img: string = '';
+  @Input() name: string = '';
+  @Input() discription: string = '';
+  @Input() profile_function: string = this.folgen_status;
+
+  constructor(public friendservice: FriendService) {}
+
+  folgen_toggle() {
+    this.folgen = !this.folgen;
+    if (this.folgen) {
+      this.folgen_status = 'folgen';
+      this.friendservice.removeFriendByName(this.name);
+    } else {
+      this.folgen_status = 'Entfernen';
+    }
+    this.profile_function = this.folgen_status; // Aktualisierung von profile_function
+  }
 }
