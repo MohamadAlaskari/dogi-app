@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hamster-card.component.scss'],
 })
 export class HamsterCardComponent {
-  @Input() img: String = 'hamster_1.jpg';
+  @Input() img: String = '';
   @Input() text: String = '';
 
 }

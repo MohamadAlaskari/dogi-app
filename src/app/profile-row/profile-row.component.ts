@@ -9,4 +9,6 @@ export class ProfileRowComponent {
   @Input() img: String = '';
   @Input() name: String = '';
   @Input() discription: String = '';
+  @Input() profile_function: String = '';
+
 }

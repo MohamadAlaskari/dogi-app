@@ -1,4 +1,4 @@
-<app-profile-row img="assets/img/hamster/hamster_1.jpg" name="San" discription="5 Jahre alt"></app-profile-row>
+<app-profile-row img="assets/img/dog/dog_16.jpg" name="San" discription="5 Jahre alt" profile_function="anzeigen"></app-profile-row>
 
 <div class="freundschaft-vorschlaege">
 
@@ -7,7 +7,7 @@
   <div class="profile-row">
     <ng-container *ngFor="let img of profile_rows.img; let i = index">
       <app-profile-row [img]="img" [name]="profile_rows.name[i]"
-        [discription]="profile_rows.discription[i]"></app-profile-row>
+        [discription]="profile_rows.discription[i]" [profile_function]="'folgen'"></app-profile-row>
     </ng-container>
   </div>
 </div>

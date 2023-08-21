@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class ProposalsComponent {
   profile_rows = {
     img: [
-      'assets/img/hamster/hamster_6.jpg',
-      'assets/img/hamster/hamster_7.jpg',
-      'assets/img/hamster/hamster_8.jpg',
-      'assets/img/hamster/hamster_9.jpg',
-      'assets/img/hamster/hamster_10.jpg',
+      'assets/img/dog/dog_11.jpg',
+      'assets/img/dog/dog_12.jpg',
+      'assets/img/dog/dog_13.jpg',
+      'assets/img/dog/dog_14.jpg',
+      'assets/img/dog/dog_15.jpg',
     ],
     name: ['Moric', 'Laviv', 'Janu', 'Kermein', 'WiKi'],
     discription: [

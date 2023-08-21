@@ -8,19 +8,27 @@
     height: 60px;
     border-radius: 50%;
     background-size: cover;
-
   }
   div {
-    b {
+    h4 {
       font-size: 22px;
       color: #2fdf84;
+      margin-bottom: 2px;
+      width: 100px;
+      white-space: nowrap; /* Verhindert Zeilenumbruch */
+      overflow: hidden; /* Verhindert Überlauf */
+      text-overflow: ellipsis; /* Fügt ... hinzu, wenn der Text den Container sprengt */
     }
     .discription {
       font-size: 15px;
       color: rgba(255, 255, 255, 0.7);
     }
   }
-  p{
-    margin-left: 25px;
+  .profile-function {
+    margin-left: 3px;
+    &:hover {
+      cursor: pointer;
+      color: #2fdf84;
+    }
   }
 }

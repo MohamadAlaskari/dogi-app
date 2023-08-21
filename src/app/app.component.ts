@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   post = {
     img: [
-      'assets/img/hamster/hamster_1.jpg',
-      'assets/img/hamster/hamster_2.jpg',
-      'assets/img/hamster/hamster_3.jpg',
-      'assets/img/hamster/hamster_4.jpg',
-      'assets/img/hamster/hamster_5.jpg',
-      'assets/img/hamster/hamster_6.jpg',
-      'assets/img/hamster/hamster_7.jpg',
-      'assets/img/hamster/hamster_8.jpg',
-      'assets/img/hamster/hamster_9.jpg',
-      'assets/img/hamster/hamster_10.jpg',
+      'assets/img/dog/dog_1.jpg',
+      'assets/img/dog/dog_2.jpg',
+      'assets/img/dog/dog_3.jpg',
+      'assets/img/dog/dog_4.jpg',
+      'assets/img/dog/dog_5.jpg',
+      'assets/img/dog/dog_6.jpg',
+      'assets/img/dog/dog_7.jpg',
+      'assets/img/dog/dog_8.jpg',
+      'assets/img/dog/dog_9.jpg',
+      'assets/img/dog/dog_10.jpg',
     ],
     text: [
       'Hallo mein Name ist San, ich freue mich euch kennen zu lernen:)',
