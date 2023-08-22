@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FriendService {
-  names = [''];
-  images = [''];
-  discriptions = ['3 Jahre alt'];
+  names: string[] = [];
+  images: string[] = [];
+  discriptions: string[] = [];
 
   constructor() {}
 
