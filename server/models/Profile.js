@@ -14,12 +14,18 @@ Profile.init(
     img: {
       type: DataTypes.STRING,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
     },
     alt: {
       type: DataTypes.INTEGER,
-    }, 
+    },
+    email: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
+    },
     createdAt: {
       type: DataTypes.DATE,
     },

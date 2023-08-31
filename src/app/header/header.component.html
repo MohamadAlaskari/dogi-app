@@ -1,4 +1,12 @@
 <header>
   <img class="logo" src="assets/img/logo.png" alt="DOGI-logo" srcset="">
- <h1 class="title">{{title}}</h1>
+  <h1 class="title">{{title}}</h1>
+
+  <nav class="nav">
+    <ul>
+      <li class="nav-item">
+        <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" class="nav-link">Login</a>
+      </li>
+    </ul>
+  </nav>
 </header>

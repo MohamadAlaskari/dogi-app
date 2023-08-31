@@ -13,4 +13,27 @@ header {
     font-size: 2.5vw;
     color: #2fdf84;
   }
+  .nav {
+    margin: 2px 30px 2px auto;
+    padding: 1em;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nav-item {
+        .nav-link {
+          text-decoration: none;
+          color: #fff;
+          letter-spacing: 1px;
+          font-size: 18px;
+
+          &:hover{
+            color: #2fdf84;
+          }
+        }
+      }
+    }
+  }
 }

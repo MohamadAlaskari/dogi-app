@@ -1,0 +1,32 @@
+<div class="login-container">
+
+  <ng-container *ngIf="switchToAuthMeldung">
+    <mat-icon class="registriert-meldung-icon" [ngClass]="success_registriert ? 'success-meldung' : 'failed-meldung'"
+      [fontIcon]="success_registriert ? 'check_circle' : 'cancel'"></mat-icon>
+
+    <p class="registriert-meldung" [ngClass]="success_registriert ? 'success-meldung' : 'failed-meldung'">
+      {{meldung}}</p>
+
+
+  </ng-container>
+
+  <ng-container *ngIf="switchToAuthMeldung===false">
+
+    <h1 class="auth-titil">Registrieren</h1>
+    <form class="form" (ngSubmit)="onSubmit()">
+      <input class="input input-name" required name="username" type="text" [(ngModel)]="username" placeholder="Username"
+        autocomplete="current-username">
+
+      <input class="input input-name" required name="email" type="email" [(ngModel)]="email" placeholder="E-mail"
+        autocomplete="current-email">
+      <input class="input input-password" required name="password" type="password" [(ngModel)]="password"
+        placeholder="Password" autocomplete="current-password">
+      <a [routerLink]="['/auth/login']" class="switch-login-link">Hast du schon einen account!</a>
+      <button type="submit" class="btn primary">
+        registrieren
+      </button>
+    </form>
+  </ng-container>
+
+
+</div>

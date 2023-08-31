@@ -11,4 +11,10 @@ const profileController = require('./controllers/profileController'); // Hier de
 
 app.use('/profiles', profileController);
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+
+try {
+  app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+} catch (error) {
+  console.error('Error occurred during database synchronization:', error);
+
+}
