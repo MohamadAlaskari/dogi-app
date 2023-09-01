@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './services/authentication/login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -30,8 +31,8 @@ export class AppComponent {
       'ich fahre heute nach Osnabrück',
       'ich fahre heute nach Oldenbürg',
       'ich fahre heute nach München',
-
-
     ],
   };
+  constructor(public loginService: LoginService) {}
+
 }

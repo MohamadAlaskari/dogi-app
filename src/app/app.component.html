@@ -1,20 +1,23 @@
-<!--<app-header></app-header>-->
-<div class="transparent"></div>
-<div class="auth-main">
-  <app-authentication></app-authentication>
-</div>
-
-<!--
-  <div class="container">
-  <div class="cards-column">
-    <app-friendbox class="f" ></app-friendbox>
-
-    <ng-container *ngFor="let img of post.img; let i = index;">
-      <app-dog-card [img]="img" [text]="post.text[i]"></app-dog-card>
-    </ng-container>
+<ng-container  *ngIf="!loginService.getLoggedIn()">
+  <div class="transparent"></div>
+  <div class="auth-main">
+    <app-authentication></app-authentication>
   </div>
-  <div class="proposals-column">
-    <app-proposals></app-proposals>
+</ng-container>
+<ng-container *ngIf="loginService.getLoggedIn()">
+
+    <app-header></app-header>
+    <div class="container">
+    <div class="cards-column">
+      <app-friendbox class="f" ></app-friendbox>
+
+      <ng-container *ngFor="let img of post.img; let i = index;">
+        <app-dog-card [img]="img" [text]="post.text[i]"></app-dog-card>
+      </ng-container>
+    </div>
+    <div class="proposals-column">
+      <app-proposals></app-proposals>
+    </div>
   </div>
-</div>
--->
+
+</ng-container>

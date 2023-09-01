@@ -54,4 +54,20 @@
       border: none;
     }
   }
+
+  .registriert-meldung-icon {
+    scale: 1.8;
+    color: #2fdf84;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  .registriert-meldung {
+    font-size: 20px;
+  }
+  .success-meldung {
+    color: #2fdf84;
+  }
+  .failed-meldung {
+    color: #d63838;
+  }
 }

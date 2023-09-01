@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { SignupService } from 'src/app/services/signup/signup.service';
+import { SignupService } from 'src/app/services/authentication/signup/signup.service';
 
 @Component({
   selector: 'app-signup',
@@ -29,7 +29,7 @@ export class SignupComponent {
         console.log('Registration successful', response);
         this.switchToAuthMeldung = true;
         this.success_registriert = true;
-        this.meldung='Du hast dich erfolgreich regestriert!';
+        this.meldung = 'User registered successfully!';
         setTimeout(() => {
           this.router.navigate(['auth/login']);
         }, 4000);

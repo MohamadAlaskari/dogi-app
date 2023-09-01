@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class SignupService {
   constructor(private http: HttpClient) {}
 
-  signup(userdata: any) {
-    return this.http.post('http://localhost:3007/profiles/signup', userdata);
+  signup(signup_data: any) {
+    return this.http.post('http://localhost:3007/profiles/signup', signup_data);
   }
 }
