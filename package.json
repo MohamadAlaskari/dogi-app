@@ -1,6 +1,6 @@
 {
-  "name": "Dogi-app",
-  "version": "0.0.0",
+  "name": "dogi-app",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,5 +36,26 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.1.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamadAlaskari/dogi-app.git"
+  },
+  "keywords": [
+    "dogi-app",
+    "angular",
+    "nodejs",
+    "express",
+    "mysql",
+    "mohamad",
+    "alaskari"
+  ],
+  "author": "Mohamad Alaskari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamadAlaskari/dogi-app/issues"
+  },
+  "homepage": "https://github.com/MohamadAlaskari/dogi-app#readme"
 }
