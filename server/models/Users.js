@@ -6,7 +6,7 @@ class Users extends Model { }
 
 Users.init(
   {
-    id: {
+    userID: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
@@ -23,7 +23,7 @@ Users.init(
       type: DataTypes.STRING,
       allowNull: true
     },
-    mobielnumber: {
+    mobilnumber: {
       type: DataTypes.STRING,
       allowNull: true
     },
@@ -46,9 +46,11 @@ Users.init(
     },
     createdAt: {
       type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     },
     updatedAt: {
       type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     }
   },
   {
