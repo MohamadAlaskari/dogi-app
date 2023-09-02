@@ -9,7 +9,7 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(login_data: any) {
-    return this.http.post('http://localhost:3007/profiles/login', login_data);
+    return this.http.post('http://localhost:3007/users/login', login_data);
   }
 
   setLoggedIn(status: boolean) {

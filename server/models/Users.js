@@ -2,9 +2,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/dbConfig');
 
-class Profile extends Model { }
+class Users extends Model { }
 
-Profile.init(
+Users.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,6 +13,19 @@ Profile.init(
     },
     img: {
       type: DataTypes.STRING,
+    },
+    lastname: {
+      type: DataTypes.STRING,
+      allowNull: true
+
+    },
+    firstname: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    mobielnumber: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     username: {
       type: DataTypes.STRING,
@@ -40,9 +53,9 @@ Profile.init(
   },
   {
     sequelize,
-    modelName: 'Profile',
-    tableName: 'profile',
+    modelName: 'Users',
+    tableName: 'users',
   }
 );
 
-module.exports = Profile;
+module.exports = Users;

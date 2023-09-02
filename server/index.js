@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -13,8 +12,8 @@ function errorHandler(err, req, res, next) {
 }
 
 // Bindung der Profile-Routen
-const profileRoutes = require('./routes/profileRoutes');
-app.use('/profiles', profileRoutes);
+const profileRoutes = require('./routes/usersRoutes');
+app.use('/users', profileRoutes);
 app.use(errorHandler);
 
 try {

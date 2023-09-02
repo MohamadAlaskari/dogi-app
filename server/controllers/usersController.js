@@ -1,14 +1,14 @@
-const Profile = require('../models/Profile');
+const Users = require('../models/Users');
 const bcrypt = require('bcrypt');
 const { Op } = require('sequelize');
 
-async function getAllProfiles(req, res) {
+async function getAllUsers(req, res) {
   try {
-    const profiles = await Profile.findAll();
-    if (profiles.length === 0) {
+    const users = await Users.findAll();
+    if (users.length === 0) {
       return res.status(404).json({ error: 'Keine Profile gefunden!' });
     }
-    return res.status(200).json(profiles);
+    return res.status(200).json(users);
   } catch (error) {
     return res.status(500).json({ error: 'An error occurred while fetching data.' });
   }
@@ -18,7 +18,7 @@ async function signup(req, res) {
   try {
     const { img, username, alt, email, password } = req.body;
     // Überprüfe, ob Benutzername oder E-Mail bereits existieren
-    const existingUser = await Profile.findOne({
+    const existingUser = await Users.findOne({
       where: {
         [Op.or]: [{ username }, { email }],
       },
@@ -29,7 +29,7 @@ async function signup(req, res) {
 
     // Hash das Passwort, bevor es in die Datenbank gespeichert wird
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newProfile = await Profile.create({
+    const newUser = await Users.create({
       img,
       username,
       alt,
@@ -47,7 +47,7 @@ async function signup(req, res) {
 async function login(req, res) {
   try {
     const { username, password } = req.body; // Hier das Passwort hinzugefügt
-    const user = await Profile.findOne({
+    const user = await Users.findOne({
       where: { username }
     })
     if (!user) {
@@ -65,18 +65,18 @@ async function login(req, res) {
   }
 }
 
-async function updateProfile(req, res) {
+async function updateUser(req, res) {
   // Implementiere die Profilaktualisierungslogik hier
 }
 
-async function deleteProfile(req, res) {
+async function deleteUser(req, res) {
   // Implementiere die Profilöschungslogik hier
 }
 
 module.exports = {
-  getAllProfiles,
+  getAllUsers,
   signup,
   login,
-  updateProfile,
-  deleteProfile,
+  updateUser,
+  deleteUser,
 };
