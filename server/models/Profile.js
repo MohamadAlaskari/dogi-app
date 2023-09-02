@@ -16,15 +16,20 @@ Profile.init(
     },
     username: {
       type: DataTypes.STRING,
+      unique: true,
+      allowNull: false
     },
     alt: {
       type: DataTypes.INTEGER,
     },
     email: {
       type: DataTypes.STRING,
+      unique: true,
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false
     },
     createdAt: {
       type: DataTypes.DATE,

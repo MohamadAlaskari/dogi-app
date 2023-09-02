@@ -1,15 +1,14 @@
 const { Sequelize } = require('sequelize');
 
-const username = process.env.USERNAME;
-const password = process.env.PASSWORD;
-const hostName = process.env.HOSTNAME;
-const dataBase = process.env.DATABASE;
+// Definiere die Verbindungsparameter
+const dbConfig = {
+  dialect: 'mysql',         // Datenbanktyp (hier: MySQL)
+  host: process.env.HOSTNAME,   // Hostname der Datenbank
+  username: process.env.USERNAME, // Benutzername
+  password: process.env.PASSWORD, // Passwort
+  database: process.env.DATABASE  // Name der Datenbank
+};
 
-
-const sequelize = new Sequelize(
-  `mysql://${username}:${password}@${hostName}/${dataBase}`
-  
-);
-//const sequelize = new Sequelize('mysql://u252525807_dogi:96MoAl96+@sql972.main-hosting.eu/u252525807_dogi');
-
+// Erstelle eine Sequelize-Instanz mit den Verbindungsparametern
+const sequelize = new Sequelize(dbConfig);
 module.exports = sequelize;

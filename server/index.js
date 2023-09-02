@@ -7,10 +7,15 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const profileController = require('./controllers/profileController'); // Hier den korrekten Pfad verwenden
+function errorHandler(err, req, res, next) {
+  console.error('An error occurred:', err);
+  return res.status(500).json({ error: 'An error occurred.' });
+}
 
-app.use('/profiles', profileController);
-
+// Bindung der Profile-Routen
+const profileRoutes = require('./routes/profileRoutes');
+app.use('/profiles', profileRoutes);
+app.use(errorHandler);
 
 try {
   app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

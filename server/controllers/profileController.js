@@ -1,23 +1,20 @@
-const express = require('express');
 const Profile = require('../models/Profile');
 const bcrypt = require('bcrypt');
 const { Op } = require('sequelize');
-const { async } = require('rxjs');
 
-const router = express.Router();
-
-// get alle profile
-router.get('/', async (req, res) => {
+async function getAllProfiles(req, res) {
   try {
     const profiles = await Profile.findAll();
+    if (profiles.length === 0) {
+      return res.status(404).json({ error: 'Keine Profile gefunden!' });
+    }
     return res.status(200).json(profiles);
   } catch (error) {
     return res.status(500).json({ error: 'An error occurred while fetching data.' });
   }
-});
+}
 
-// Registrierung eines neuen Benutzers
-router.post('/signup', async (req, res) => {
+async function signup(req, res) {
   try {
     const { img, username, alt, email, password } = req.body;
     // Überprüfe, ob Benutzername oder E-Mail bereits existieren
@@ -45,10 +42,9 @@ router.post('/signup', async (req, res) => {
     console.error('Error during user registration:', error);
     return res.status(500).json({ error: 'An error occurred while registering user!' });
   }
-});
+}
 
-//login (check username and password)
-router.post('/login', async (req, res) => {
+async function login(req, res) {
   try {
     const { username, password } = req.body; // Hier das Passwort hinzugefügt
     const user = await Profile.findOne({
@@ -67,24 +63,20 @@ router.post('/login', async (req, res) => {
   } catch (error) {
     return res.status(500).json({ error: 'An error occurred while login user!' })
   }
-})
+}
 
+async function updateProfile(req, res) {
+  // Implementiere die Profilaktualisierungslogik hier
+}
 
-router.put('/update', async (req, res) => {
-  try {
+async function deleteProfile(req, res) {
+  // Implementiere die Profilöschungslogik hier
+}
 
-  } catch (erorr) {
-    return res.status(500).json({ erorr: 'an erorr occured while update data' })
-  }
-})
-
-router.delete('/delete', async (req, res) => {
-  try {
-
-
-  } catch (erorr) {
-    return res.status(500).json({ erorr: 'an erorr occured while deleted Data' })
-  }
-})
-
-module.exports = router;
+module.exports = {
+  getAllProfiles,
+  signup,
+  login,
+  updateProfile,
+  deleteProfile,
+};

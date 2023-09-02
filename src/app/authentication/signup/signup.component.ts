@@ -32,7 +32,7 @@ export class SignupComponent {
         this.meldung = 'User registered successfully!';
         setTimeout(() => {
           this.router.navigate(['auth/login']);
-        }, 4000);
+        }, 3000);
       },
       (error) => {
         console.error('Registration failed', error.error);
@@ -41,7 +41,7 @@ export class SignupComponent {
         this.success_registriert = false;
         setTimeout(() => {
           this.switchToAuthMeldung = false;
-        }, 4000);
+        }, 3000);
       }
     );
   }
