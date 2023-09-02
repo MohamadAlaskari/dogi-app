@@ -1,6 +1,6 @@
 // profileModel.js
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('./dbConfig');
+const sequelize = require('../config/dbConfig');
 
 class Profile extends Model { }
 
