@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="linke-column">
+    <app-friend-box></app-friend-box>
+    <app-post></app-post>
+  </div>
+  <div class="proposals-column">
+    <div class="myProfile-Box">
+
+      <app-profile-item img="assets/img/dog/dog_16.jpg" name="San" discription="5 Jahre alt"
+        profile_function="anzeigen">
+      </app-profile-item>
+
+      <a [routerLink]="['/profile']" routerLinkActive="" class="show-profile-link">anzeigen</a>
+    </div>
+
+    <app-suggestions-friendship></app-suggestions-friendship>
+  </div>
+</div>

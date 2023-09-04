@@ -1,0 +1,10 @@
+<div class="freundschaft-vorschlaege">
+  <h3 class="ueberschrift-3">Freundschaft Vorschläge</h3>
+  <div class="profile-row">
+    <ng-container *ngFor="let img of profile_rows.images; let i = index">
+      <app-profile-item [img]="img " [name]="profile_rows.names[i]" [discription]="profile_rows.discriptions[i]">
+      </app-profile-item>
+      
+    </ng-container>
+  </div>
+</div>

@@ -13,9 +13,9 @@ function errorHandler(err, req, res, next) {
 
 // Bindung der Profile-Routen
 const usersRoutes = require('./routes/usersRoutes');
-const postsRoutes = require('./routes/postsRoutes')
+//const postsRoutes = require('./routes/postsRoutes')
 app.use('/users', usersRoutes);
-app.use('/posts', postsRoutes)
+//app.use('/posts', postsRoutes)
 app.use(errorHandler);
 
 try {

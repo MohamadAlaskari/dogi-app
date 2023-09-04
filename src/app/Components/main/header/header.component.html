@@ -1,0 +1,13 @@
+<header>
+  <img class="logo" src="assets/img/logo.png" alt="DOGI-logo" srcset="">
+  <h1 class="title">{{title}}</h1>
+
+  <nav class="nav">
+    <ul>
+      <li class="nav-item">
+        <a (click)="logout_handle()" [routerLink]="['/login']" routerLinkActive="router-link-active"
+          class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</header>

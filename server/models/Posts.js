@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('./../config/dbConfig')
-const User = require('./Users');
+/*const { Model, DataTypes } = require('sequelize')
+const sequelize = require('../config/dbConfig')
+const Users = require('./Users');
 
 class Posts extends Model { }
 
@@ -13,7 +13,7 @@ Posts.init({
   userID: {
     type: DataTypes.INTEGER,
     references: {
-      model: User, // Das ist das Usermodell
+      model: Users, // Das ist das Usermodell
       key: 'userID', // Das ist der Primärschlüssel der Usertabelle, auf den der Fremdschlüssel verweist
     }
   },
@@ -44,7 +44,8 @@ Posts.init({
   tableName: 'posts'
 })
 
-// Beziehungsdefinition zwischen Posts und User (optional)
-Posts.belongsTo(User, { foreignKey: 'userID' });
+// Beziehungsdefinition zwischen Posts und User
+Posts.belongsTo(Users, { foreignKey: 'userID' });
 
 module.exports = Posts;
+*/

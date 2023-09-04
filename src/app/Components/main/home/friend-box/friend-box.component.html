@@ -1,0 +1,14 @@
+<div class="friendbox" *ngIf="friendBoxService.images.length > 0">
+
+  <ng-container *ngFor="let img of friendBoxService.images; let i= index ">
+    <div class="friend">
+      <img src="{{img}}" alt="">
+      <p class="name">{{friendBoxService.names[i]}}</p>
+    </div>
+  </ng-container>
+  
+</div>
+
+<div class="friendbox msg" *ngIf="friendBoxService.images.length === 0">
+  <p>Freunde warten darauf, gefunden zu werden. Starte dein Abenteuer jetzt! 🌟🤝</p>
+</div>

@@ -1,4 +1,4 @@
-const Posts = require('../models/Posts')
+/*const Posts = require('../models/Posts')
 
 async function getAllPost(req, res) {
   try {
@@ -30,3 +30,4 @@ async function getUserPosts(req, res) {
 
 module.exports = { getAllPost, getUserPosts }
 
+*/

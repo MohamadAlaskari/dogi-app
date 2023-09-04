@@ -1,6 +1,8 @@
-// profileModel.js
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/dbConfig');
+const Friends = require('./Friends').default
+const Followers = require('./Followers');
+const Posts = require('./Posts')
 
 class Users extends Model { }
 
@@ -60,4 +62,14 @@ Users.init(
   }
 );
 
+/*
+// Beziehung zu Freunden (Friends)
+Users.hasMany(Friends, { foreignKey: 'userID' });
+
+// Beziehung zu Follower (Followers)
+Users.hasMany(Followers, { foreignKey: 'userID' });
+
+// Beziehung zu Beiträgen (Posts)
+Users.hasMany(Posts, { foreignKey: 'userID' });
+*/
 module.exports = Users;

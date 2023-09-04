@@ -1,9 +1,0 @@
-<div class="profile-row">
-  <img src="{{img}}" alt="" srcset="">
-  <div>
-    <h4>{{name}}</h4>
-    <p class="discription">{{discription}}</p>
-  </div>
-  <a class="profile-row-link" [ngClass]="{'link-green': folgen, 'link-red': !folgen}"
-    (click)="folgen && friendservice.addFriend(img, name, discription); folgen_toggle()"><b>{{profile_function}}</b></a>
-</div>

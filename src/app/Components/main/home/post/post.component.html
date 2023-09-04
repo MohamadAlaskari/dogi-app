@@ -1,0 +1,5 @@
+<div class="post-container">
+  <ng-container *ngFor="let img of post.img; let i = index;">
+    <app-post-item [img]="img" [text]="post.text[i]"></app-post-item>
+  </ng-container>
+</div>
