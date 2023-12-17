@@ -31,7 +31,7 @@ export class SignupComponent {
         this.success_registriert = true;
         this.meldung = 'User registered successfully!';
         setTimeout(() => {
-          this.router.navigate(['auth/login']);
+          this.router.navigate(['login']);
         }, 3000);
       },
       (error) => {
